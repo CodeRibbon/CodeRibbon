@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle code-ribbon",
+        "command": "code-ribbon:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "code-ribbon",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "code-ribbon:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
