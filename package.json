@@ -12,5 +12,73 @@
   "engines": {
     "atom": ">=1.34.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "configSchema": {
+    "pane_count_calc": {
+      "type": "object",
+      "order": 30,
+      "properties": {
+        "pane_count_horizontal_mode": {
+          "title": "Horizontal Pane Count",
+          "order": 32,
+          "type": "string",
+          "default": "number",
+          "enum": [
+            {
+              "value": "number",
+              "description": "Use a specific number of panes."
+            },
+            {
+              "value": "minpixels",
+              "description": "Fit max number of panes using min width."
+            }
+          ]
+        },
+        "pane_count_horizontal_number": {
+          "title": "Number of horizontal panes",
+          "order": 33,
+          "description": "How many horizontal panes per view?",
+          "type": "integer",
+          "default": 3
+        },
+        "pane_count_horizontal_min_pixels": {
+          "title": "Minimum Pixel Width",
+          "order": 34,
+          "description": "Minimum width in pixels for a single pane.",
+          "type": "integer",
+          "default": 300
+        },
+        "pane_count_vertical_mode": {
+          "title": "Vertical Pane Count",
+          "order": 35,
+          "type": "string",
+          "default": "number",
+          "enum": [
+            {
+              "value": "number",
+              "description": "Use a specific number of vertical strips."
+            },
+            {
+              "value": "minpixels",
+              "description": "Fit max number of panes using min height."
+            }
+          ]
+        },
+        "pane_count_vertical_number": {
+          "title": "Number of horizontal panes",
+          "order": 36,
+          "description": "How many vertical pane strips per view?",
+          "type": "integer",
+          "default": 2
+        },
+        "pane_count_vertical_min_pixels": {
+          "title": "Minimum Pixel Height",
+          "order": 37,
+          "description": "Minimum height in pixels for a single pane.",
+          "type": "integer",
+          "default": 420
+        }
+      }
+    }
+  }
 }
