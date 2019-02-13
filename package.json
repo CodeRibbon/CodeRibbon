@@ -65,7 +65,7 @@
           ]
         },
         "pane_count_vertical_number": {
-          "title": "Number of horizontal panes",
+          "title": "Number of vertical strips",
           "order": 36,
           "description": "How many vertical pane strips per view?",
           "type": "integer",
