@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "code-ribbon:toggle"
   },
-  "repository": "https://github.com/atom/code-ribbon",
+  "repository": "https://github.com/utk-se/CodeRibbon",
   "license": "MIT",
   "engines": {
     "atom": ">=1.34.0 <2.0.0"
