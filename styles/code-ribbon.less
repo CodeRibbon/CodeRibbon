@@ -8,6 +8,9 @@ atom-pane-container.cr-primary-container {
   flex-direction: column;
 }
 
-.cr-hidden-display-none {
-  display: none;
+.cr-blank-patch::before {
+  content: "I am a CodeRibbon Patch!";
+  position: absolute;
+  right: 2em;
+  top: 5em;
 }
