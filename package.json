@@ -4,9 +4,6 @@
   "version": "0.0.2",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "code-ribbon:toggle"
-  },
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/utk-se/CodeRibbon.git"
@@ -14,6 +11,11 @@
   "license": "MIT",
   "engines": {
     "atom": ">=1.34.0 <2.0.0"
+  },
+  "deserializers": {
+    "CodeRibbonManager": "deserialize_CR_stuff",
+    "CodeRibbonRibbonContainer": "deserialize_CR_stuff",
+    "CodeRibbonSingleRibbon": "deserialize_CR_stuff"
   },
   "dependencies": {},
   "configSchema": {
