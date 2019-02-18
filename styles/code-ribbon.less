@@ -6,6 +6,7 @@
 
 atom-pane-container.cr-primary-container {
   flex-direction: column;
+  overflow: scroll;
 
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
@@ -20,6 +21,8 @@ atom-pane-container.cr-primary-container {
   }
 
   atom-pane-axis.cr-ribbon-container {
-    overflow-x: scroll;
+    overflow-x: visible;
+    margin: 0px;
+    transition: ease 0.5s;
   }
 }
