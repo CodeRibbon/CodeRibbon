@@ -6,15 +6,20 @@
 
 atom-pane-container.cr-primary-container {
   flex-direction: column;
-}
 
-.cr-blank-patch::before {
-  content: "I am a CodeRibbon Patch!";
-  position: absolute;
-  right: 2em;
-  top: 5em;
-}
+  atom-pane.pane ul.tab-bar li.tab {
+    width: 100%;
+    max-width: none;
+  }
 
-atom-pane-axis.cr-ribbon-container {
-  overflow-x: scroll;
+  .cr-blank-patch::before {
+    content: "I am a CodeRibbon Patch!";
+    position: absolute;
+    right: 2em;
+    top: 5em;
+  }
+
+  atom-pane-axis.cr-ribbon-container {
+    overflow-x: scroll;
+  }
 }
