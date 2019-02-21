@@ -6,7 +6,8 @@
 
 atom-pane-container.cr-primary-container {
   flex-direction: column;
-  overflow: scroll;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
@@ -22,10 +23,22 @@ atom-pane-container.cr-primary-container {
   .cr-patch {
     border: 2px solid rebeccapurple;
   }
+  .cr-patch.active {
+    border: 2px solid blue;
+  }
 
   atom-pane-axis.cr-ribbon-container {
     overflow-x: visible;
     margin: 0px;
     transition: ease 0.5s;
+  }
+  atom-pane-axis.cr-ribbon-container.cr-overview-active {
+    transform: scale(0.5);
+
+    atom-pane.pane {
+      div {
+        pointer-events: none;
+      }
+    }
   }
 }
