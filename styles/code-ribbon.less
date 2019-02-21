@@ -7,7 +7,6 @@
 atom-pane-container.cr-primary-container {
   flex-direction: column;
   overflow-x: scroll;
-  scroll-behavior: smooth;
 
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
@@ -30,12 +29,18 @@ atom-pane-container.cr-primary-container {
   atom-pane-axis.cr-ribbon-container {
     overflow-x: visible;
     margin: 0px;
-    transition: ease 0.5s;
+    transition: transform ease 0.5s, transform-origin ease 0.5s;
+    transform-origin: center;
   }
+
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
+    // everything in here is only applied while in the OVERVIEW!
     transform: scale(0.5);
 
     atom-pane.pane {
+      ul.tab-bar {
+        pointer-events: none;
+      }
       div {
         pointer-events: none;
       }
