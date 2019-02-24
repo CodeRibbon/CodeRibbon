@@ -2,8 +2,12 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle code-ribbon",
-        "command": "code-ribbon:toggle"
+        "label": "Add patches",
+        "command": "code-ribbon:add"
+      },
+      {
+        "label": "Remove Patches",
+        "command": "code-ribbon:remove"
       }
     ]
   },
@@ -15,8 +19,12 @@
           "label": "code-ribbon",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "code-ribbon:toggle"
+              "label": "Add Patches",
+              "command": "code-ribbon:add"
+            }, 
+            {
+              "label": "Remove Patches",
+              "command": "code-ribbon:remove"
             }
           ]
         }
