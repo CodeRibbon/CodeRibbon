@@ -4,6 +4,10 @@
       {
         "label": "Add patches",
         "command": "code-ribbon:add"
+      },
+      {
+        "label": "Remove Patches",
+        "command": "code-ribbon:remove"
       }
     ]
   },
@@ -17,6 +21,10 @@
             {
               "label": "Add Patches",
               "command": "code-ribbon:add"
+            }, 
+            {
+              "label": "Remove Patches",
+              "command": "code-ribbon:remove"
             }
           ]
         }
