@@ -6,23 +6,55 @@
 
 atom-pane-container.cr-primary-container {
   flex-direction: column;
-  overflow: scroll;
+  overflow-x: scroll;
 
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
     max-width: none;
   }
 
-  .cr-blank-patch::before {
-    content: "I am a CodeRibbon Patch!";
-    position: absolute;
-    right: 2em;
-    top: 5em;
-  }
-
   atom-pane-axis.cr-ribbon-container {
     overflow-x: visible;
     margin: 0px;
-    transition: ease 0.5s;
+    transition: transform ease 0.5s, transform-origin ease 0.5s;
+    transform-origin: center;
+  }
+
+  atom-pane-axis.cr-ribbon-container.cr-overview-active {
+    // everything in here is only applied while in the OVERVIEW!
+    transform: scale(0.5);
+
+    atom-pane.cr-patch {
+      ul.tab-bar {
+        pointer-events: none;
+      }
+      div {
+        pointer-events: none;
+      }
+    }
+    atom-pane.cr-patch:hover {
+      z-index: 2;
+      box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    atom-pane-resize-handle {
+      pointer-events: none;
+    }
+  }
+}
+
+// dev-only css:
+atom-pane-container.cr-primary-container.cr-dev-active {
+  .cr-patch::before {
+    content: "CodeRibbon Patch";
+    position: absolute;
+    align-self: center;
+    top: 6em;
+  }
+  .cr-patch {
+    border: 2px solid rebeccapurple;
+  }
+  .cr-patch.active {
+    border: 2px solid blue;
   }
 }

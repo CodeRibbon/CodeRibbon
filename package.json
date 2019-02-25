@@ -15,7 +15,8 @@
   "deserializers": {
     "CodeRibbonManager": "deserialize_CR_stuff",
     "CodeRibbonRibbonContainer": "deserialize_CR_stuff",
-    "CodeRibbonSingleRibbon": "deserialize_CR_stuff"
+    "CodeRibbonSingleRibbon": "deserialize_CR_stuff",
+    "CodeRibbonPatch": "deserialize_CR_stuff"
   },
   "dependencies": {},
   "configSchema": {
