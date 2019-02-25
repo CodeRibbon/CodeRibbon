@@ -2,12 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Add patches",
-        "command": "code-ribbon:add"
-      },
-      {
-        "label": "Remove Patches",
-        "command": "code-ribbon:remove"
+        "label": "Add Patch Column",
+        "command": "code-ribbon:add-patch-column"
       }
     ]
   },
@@ -16,15 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "code-ribbon",
+          "label": "CodeRibbon",
           "submenu": [
             {
-              "label": "Add Patches",
-              "command": "code-ribbon:add"
-            }, 
-            {
-              "label": "Remove Patches",
-              "command": "code-ribbon:remove"
+              "label": "Add Patch Column",
+              "command": "code-ribbon:add-patch-column"
             }
           ]
         }
