@@ -5,3 +5,11 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, li, a {
   font-family: 'Lora', serif; }
+
+#gif {
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 90%; }
