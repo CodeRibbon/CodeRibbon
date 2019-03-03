@@ -1,2 +1,7 @@
-.current {
-  color: green; }
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif; }
+
+p, ul, li, a {
+  font-family: 'Lora', serif; }
