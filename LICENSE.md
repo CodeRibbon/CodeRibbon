@@ -1,4 +1,4 @@
-Copyright (c) 2019 <Your name here>
+Copyright (c) 2019 Ben Klein (robobenklein) et al (`git shortlog -sn`)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
