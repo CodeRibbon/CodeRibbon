@@ -48,11 +48,14 @@ atom-pane-container.cr-primary-container {
   // TODO: for empty-patches, will have the style for the fuzzy-finder here
 
   // need this to 'pop' to user
-  .cr-patch.active atom-text-editor {
-    background-color: #282c39;
-  }
   .cr-patch.active {
+    // empty patch color
     background-color: #282c39;
+
+    // patches with stuff
+    atom-text-editor {
+      background-color: #282c39;
+    }
   }
 }
 
