@@ -49,8 +49,16 @@ atom-pane-container.cr-primary-container {
 
   // need this to 'pop' to user
   .cr-patch.active {
-    // empty patch color
-    background-color: #282c39;
+    
+    // highlight active tabs to indicate active patch
+    .tab {
+      background-color: #434957;
+    }
+
+    // empty patches are entirely highlited
+    // this may be removed with the fuzzy-finder search in the middle
+    background-color: #434957;
+
   }
 }
 
