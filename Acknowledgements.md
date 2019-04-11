@@ -10,7 +10,7 @@ This is a research project at the University of Tennessee.
 
 ### Dr. Austin Henley
 
-![Austin Henley Picture](https://www.eecs.utk.edu/wp-content/uploads/2018/07/Henley_EECS.jpg)
+![Austin Henley Picture](https://avatars0.githubusercontent.com/u/2180824?s=400&v=4)
 
 * [Website](http://web.eecs.utk.edu/~azh/)
 
