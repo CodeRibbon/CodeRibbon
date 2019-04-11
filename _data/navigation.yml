@@ -1,7 +1,5 @@
 - name: Home
   link: /CodeRibbon/
-- name: About
-  link: /CodeRibbon/About
 - name: Publications
   link: /CodeRibbon/Publications
 - name: Tutorial
