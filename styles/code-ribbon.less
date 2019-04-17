@@ -8,9 +8,17 @@ atom-pane-container.cr-primary-container {
   flex-direction: column;
   overflow-x: scroll;
 
+  atom-pane-resize-handle.horizontal {
+    display: none;
+  }
+
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
     max-width: none;
+  }
+
+  atom-pane.cr-patch.active .tab-bar {
+    background-color: lighten(@pane-item-background-color, 15%);
   }
 
   atom-pane-axis.cr-ribbon-container {
@@ -52,9 +60,9 @@ atom-pane-container.cr-primary-container.cr-dev-active {
     top: 6em;
   }
   .cr-patch {
-    border: 2px solid rebeccapurple;
+    // border: 2px solid rebeccapurple;
   }
   .cr-patch.active {
-    border: 2px solid blue;
+    // border: 2px solid blue;
   }
 }
