@@ -52,12 +52,12 @@ atom-pane-container.cr-primary-container {
     
     // highlight active tabs to indicate active patch
     .tab {
-      background-color: #434957;
+      background-color: lighten(@tab-background-color-active, 10%);
     }
 
     // empty patches are entirely highlited
     // this may be removed with the fuzzy-finder search in the middle
-    background-color: #434957;
+    background-color: lighten(@base-background-color, 10%);
 
   }
 }
