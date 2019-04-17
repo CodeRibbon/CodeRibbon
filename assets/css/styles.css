@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+/* Index styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
 }
@@ -18,3 +19,9 @@ p, ul, li, a {
   display: block;
   max-width: 80%;
 }
+
+/* Acknowledgements */
+
+/* Tutorial */
+
+/* Publications */
