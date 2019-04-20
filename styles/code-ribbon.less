@@ -51,6 +51,25 @@ atom-pane-container.cr-primary-container {
   }
 }
 
+// production css
+atom-pane-container.cr-primary-container {
+  // TODO: for empty-patches, will have the style for the fuzzy-finder here
+
+  // need this to 'pop' to user
+  .cr-patch.active {
+    
+    // highlight active tabs to indicate active patch
+    .tab {
+      background-color: lighten(@tab-background-color-active, 10%);
+    }
+
+    // empty patches are entirely highlited
+    // this may be removed with the fuzzy-finder search in the middle
+    background-color: lighten(@base-background-color, 10%);
+
+  }
+}
+
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
   .cr-patch::before {
