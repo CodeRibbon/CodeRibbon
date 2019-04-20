@@ -1,8 +1,8 @@
 - name: Home
-  link: /CodeRibbon/
+  link: /
 - name: Publications
-  link: /CodeRibbon/Publications
+  link: /Publications
 - name: Tutorial
-  link: /CodeRibbon/Tutorial
+  link: /Tutorial
 - name: Acknowledgements
-  link: /CodeRibbon/Acknowledgements
+  link: /Acknowledgements

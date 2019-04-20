@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+:root {
+  --main--bg-color: #212121;
+  --main--bg-text-color: #323232;
+  --main--text-color: #73b1ac;
+  --main--bg-btn-color: #91dbd5;
+}
+
+.content, nav {
+  background-color: var(--main--bg-color);
+}
+
+.jumbotron {
+  background-color: var(--main--bg-text-color) !important;
+}
+
+p, h1, h2, li {
+  color: var(--main--text-color);
+}
+
 /* Index styling */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
