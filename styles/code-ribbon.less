@@ -4,6 +4,7 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
+// production css
 atom-pane-container.cr-primary-container {
   flex-direction: column;
   overflow-x: scroll;
@@ -15,10 +16,6 @@ atom-pane-container.cr-primary-container {
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
     max-width: none;
-  }
-
-  atom-pane.cr-patch.active .tab-bar {
-    background-color: lighten(@pane-item-background-color, 15%);
   }
 
   atom-pane-axis.cr-ribbon-container {
@@ -49,24 +46,20 @@ atom-pane-container.cr-primary-container {
       pointer-events: none;
     }
   }
-}
 
-// production css
-atom-pane-container.cr-primary-container {
   // TODO: for empty-patches, will have the style for the fuzzy-finder here
 
   // need this to 'pop' to user
   .cr-patch.active {
-    
+
     // highlight active tabs to indicate active patch
     .tab {
-      background-color: lighten(@tab-background-color-active, 10%);
+      background-color: lighten(@tab-background-color-active, 10%) !important;
     }
 
     // empty patches are entirely highlited
     // this may be removed with the fuzzy-finder search in the middle
     background-color: lighten(@base-background-color, 10%);
-
   }
 }
 
