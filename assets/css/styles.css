@@ -35,8 +35,8 @@ p, ul, li, a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
-  display: block;
-  max-width: 80%;
+  display: inline-block;
+  max-width: 100%;
 }
 
 #UT {
