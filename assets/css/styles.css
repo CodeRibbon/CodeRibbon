@@ -12,6 +12,16 @@ html, body {
   height: 100%;
 }
 
+#topbar-navbar-collapse-1 {
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+.navbar-static-top {
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
 .jumbotron, hr {
   background-color: var(--main--bg-text-color) !important;
 }

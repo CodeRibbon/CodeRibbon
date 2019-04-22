@@ -1,31 +1,17 @@
-<!-- <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-  <div class="container topnav">
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="subnav">
-        <ul class="nav nav-pills menu">
-          <li class="item-103 current active"><a class="text-uppercase" href="/">News</a></li>
-          <li class="item-145"><a class="text-uppercase" href="/screens">Screens</a></li>
-          <li class="item-104"><a class="text-uppercase" href="/login">Login</a></li>
-          <li class="item-143"><a class="text-uppercase" href="/servers">Servers</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav> -->
-
 <nav class="navbar navbar-expand-md navbar-static-top navbar-dark" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle colllapsed d-md-none"
+    <div class="navbar-header" style="width: inherit;">
+      <button type="button" class="navbar-toggler collapsed d-md-none"
           data-toggle="collapse" data-target="#topbar-navbar-collapse-1"
-          aria-controls="topbar-navbar-collapse-1", aria-expanded="false">
+          aria-controls="topbar-navbar-collapse-1", aria-expanded="false"
+          style="float: right;">
         <span class="sr-only">Toggle navigation</span>
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="topnav navbar-brand" href="{{ site.baseurl }}/">CodeRibbon</a>
     </div>
     <div class="collapse navbar-collapse" id="topbar-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav nav-pills menu">
         {% for item in site.data.navigation %}
         {% if link.url contains 'http' %}
         {% assign domain = '' %}
