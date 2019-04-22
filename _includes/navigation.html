@@ -11,7 +11,7 @@
       <a class="topnav navbar-brand" href="{{ site.baseurl }}/">CodeRibbon</a>
     </div>
     <div class="collapse navbar-collapse" id="topbar-navbar-collapse-1">
-      <ul class="nav navbar-nav nav-pills menu">
+      <ul class="nav navbar-nav" style="flex-wrap: nowrap;">
         {% for item in site.data.navigation %}
         {% if link.url contains 'http' %}
         {% assign domain = '' %}
