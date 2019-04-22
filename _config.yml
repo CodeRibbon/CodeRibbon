@@ -1,0 +1,22 @@
+
+baseurl: '/CodeRibbon'
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
+
+collections:
+  pages:
+    output: true
+
+markdown: kramdown
+
+post_ext: md
+page_ext: md
+
+post_layout: default
+page_layout: default

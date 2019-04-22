@@ -7,9 +7,8 @@
   --main--text-color: #B9E1E2;
 }
 
-html, body {
+.content, nav {
   background-color: var(--main--bg-color);
-  height: 100%;
 }
 
 .jumbotron, hr {

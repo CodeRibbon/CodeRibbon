@@ -1,9 +1,44 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" class="nav-item nav-link{% if page.title == item.name %} active{% endif %}">{{ item.name }}</a>
-      {% endfor %}
+<!-- <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+  <div class="container topnav">
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="subnav">
+        <ul class="nav nav-pills menu">
+          <li class="item-103 current active"><a class="text-uppercase" href="/">News</a></li>
+          <li class="item-145"><a class="text-uppercase" href="/screens">Screens</a></li>
+          <li class="item-104"><a class="text-uppercase" href="/login">Login</a></li>
+          <li class="item-143"><a class="text-uppercase" href="/servers">Servers</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-md navbar-static-top navbar-dark" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle colllapsed d-md-none"
+          data-toggle="collapse" data-target="#topbar-navbar-collapse-1"
+          aria-controls="topbar-navbar-collapse-1", aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="topbar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% for item in site.data.navigation %}
+        {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = site.baseurl %}
+        {% endif %}
+        <li class="{% if page.permalink == item.link %}active{% endif %}">
+          <a href="{{ domain }}{{ item.link }}" class="nav-item nav-link">
+            {{ item.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </nav>
