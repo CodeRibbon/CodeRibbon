@@ -12,11 +12,11 @@
   background-color: var(--main--bg-color);
 }
 
-.jumbotron {
+.jumbotron, hr {
   background-color: var(--main--bg-text-color) !important;
 }
 
-p, h1, h2, li {
+p, h1, h2, h3, li {
   color: var(--main--text-color);
 }
 
