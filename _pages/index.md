@@ -11,9 +11,9 @@ layout: default
   <p class="lead">It does so by providing a configurable grid of code documents that can move left/right on a ribbon.</p>
 </div>
 
-<img id="gif"
-  src="https://user-images.githubusercontent.com/22582326/56878204-d8c81600-6a20-11e9-89f6-d3a2a47fa21f.gif"
-  alt="CodeRibbon GIF" />
+<div class="text-center">
+  <img id="gif" class="center" src="https://user-images.githubusercontent.com/22582326/56878204-d8c81600-6a20-11e9-89f6-d3a2a47fa21f.gif" alt="CodeRibbon GIF"/>
+</div>
 
 <div class="row">
   <div class="col">
