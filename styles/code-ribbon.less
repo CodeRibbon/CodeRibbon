@@ -77,16 +77,19 @@ atom-pane-container.cr-primary-container {
     // this may be removed with the fuzzy-finder search in the middle
     background-color: lighten(@base-background-color, 10%);
   }
+
+  .cr-patch .tab-bar::before {
+    content: "CodeRibbon Patch";
+    position: absolute;
+    right: 3em;
+    font-style: italic;
+    font-weight: bold;
+    align-self: center;
+  }
 }
 
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
-  // .cr-patch::before {
-  //   content: "CodeRibbon Patch";
-  //   position: absolute;
-  //   align-self: center;
-  //   top: 6em;
-  // }
   .cr-patch {
     border: 2px solid rebeccapurple;
   }
