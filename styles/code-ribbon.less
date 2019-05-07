@@ -47,7 +47,23 @@ atom-pane-container.cr-primary-container {
     }
   }
 
-  // TODO: for empty-patches, will have the style for the fuzzy-finder here
+  // TODO: style for the fuzzy-finder here
+  .cr-patch .item-views {
+    .fuzzy-finder {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+      width: 100%;
+
+      atom-text-editor.mini {
+        height: 4em;
+        flex: 0 1 auto;
+      }
+      ol.list-group {
+        flex: 1 1 auto;
+      }
+    }
+  }
 
   // need this to 'pop' to user
   .cr-patch.active {
@@ -65,16 +81,16 @@ atom-pane-container.cr-primary-container {
 
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
-  .cr-patch::before {
-    content: "CodeRibbon Patch";
-    position: absolute;
-    align-self: center;
-    top: 6em;
-  }
+  // .cr-patch::before {
+  //   content: "CodeRibbon Patch";
+  //   position: absolute;
+  //   align-self: center;
+  //   top: 6em;
+  // }
   .cr-patch {
-    // border: 2px solid rebeccapurple;
+    border: 2px solid rebeccapurple;
   }
   .cr-patch.active {
-    // border: 2px solid blue;
+    border: 2px solid blue;
   }
 }
