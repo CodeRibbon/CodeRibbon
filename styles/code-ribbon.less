@@ -62,6 +62,20 @@ atom-pane-container.cr-primary-container {
       ol.list-group {
         flex: 1 1 auto;
       }
+      li.FuzzyFinderResult {
+        margin-left: 1em;
+        margin-right: 1em;
+
+        .file {
+          display: inline-flex;
+          flex-grow: 1;
+        }
+        .path {
+          display: inline-flex;
+          position: absolute;
+          right: 0;
+        }
+      }
     }
   }
 
