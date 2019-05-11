@@ -37,9 +37,13 @@ atom-pane-container.cr-primary-container {
         pointer-events: none;
       }
     }
+    atom-pane.cr-patch.active {
+      z-index: 1;
+      box-shadow: 0px 0px 50px 15px rgba(255, 130, 0, 0.4);
+    }
     atom-pane.cr-patch:hover {
       z-index: 2;
-      box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 50px 15px rgba(185, 225, 226, 0.4);
     }
 
     atom-pane-resize-handle {
@@ -71,10 +75,18 @@ atom-pane-container.cr-primary-container {
         .path {
           display: inline-flex;
           position: absolute;
-          right: 1em;
+          right: 2em;
+        }
+        .status {
+          position: absolute;
+          right: 0;
         }
       }
     }
+  }
+
+  .cr-patch .cr-patch-background-tips .background-message .message {
+    font-size: large;
   }
 
   // need this to 'pop' to user
