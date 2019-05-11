@@ -27,7 +27,7 @@ atom-pane-container.cr-primary-container {
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
     // everything in here is only applied while in the OVERVIEW!
-    transform: scale(0.5);
+    transform: scale3d(0.5, 0.5, 1) perspective(1px);
 
     atom-pane.cr-patch {
       ul.tab-bar {
@@ -113,6 +113,11 @@ atom-pane-container.cr-primary-container {
     font-weight: bold;
     align-self: center;
   }
+}
+
+atom-panel-container.left .tree-view:active {
+  box-shadow: 0px 0px 50px 15px white;
+  background-color: white;
 }
 
 // dev-only css:
