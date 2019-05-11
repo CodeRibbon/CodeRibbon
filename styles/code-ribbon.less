@@ -63,17 +63,15 @@ atom-pane-container.cr-primary-container {
         flex: 1 1 auto;
       }
       li.FuzzyFinderResult {
-        margin-left: 1em;
-        margin-right: 1em;
-
         .file {
           display: inline-flex;
           flex-grow: 1;
+          margin-left: 2px;
         }
         .path {
           display: inline-flex;
           position: absolute;
-          right: 0;
+          right: 1em;
         }
       }
     }
@@ -92,6 +90,9 @@ atom-pane-container.cr-primary-container {
     background-color: lighten(@base-background-color, 10%);
   }
 
+  .cr-patch .tab-bar li.placeholder {
+    display: none;
+  }
   .cr-patch .tab-bar::before {
     content: "CodeRibbon Patch";
     position: absolute;
@@ -105,9 +106,9 @@ atom-pane-container.cr-primary-container {
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
   .cr-patch {
-    border: 2px solid rebeccapurple;
+    // border: 2px solid rebeccapurple;
   }
   .cr-patch.active {
-    border: 2px solid blue;
+    // border: 2px solid blue;
   }
 }
