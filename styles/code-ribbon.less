@@ -4,6 +4,9 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
+@active-highlight-color: rgba(255, 130, 0, 0.4);
+@hover-highlight-color: rgba(185, 225, 226, 0.4);
+
 // production css
 atom-pane-container.cr-primary-container {
   flex-direction: column;
@@ -39,11 +42,11 @@ atom-pane-container.cr-primary-container {
     }
     atom-pane.cr-patch.active {
       z-index: 1;
-      box-shadow: 0px 0px 50px 15px rgba(255, 130, 0, 0.4);
+      box-shadow: 0px 0px 50px 15px @active-highlight-color;
     }
     atom-pane.cr-patch:hover {
       z-index: 2;
-      box-shadow: 0px 0px 50px 15px rgba(185, 225, 226, 0.4);
+      box-shadow: 0px 0px 50px 15px @hover-highlight-color;
     }
 
     atom-pane-resize-handle {
@@ -93,7 +96,15 @@ atom-pane-container.cr-primary-container {
   .cr-patch.active {
 
     // highlight active tabs to indicate active patch
-    .tab {
+    .tab-bar {
+      // background: radial-gradient(
+      //   12em 100% at right,
+      //   @active-highlight-color 0%,
+      //   rgba(0,0,0,0) 100%
+      // );
+      background-color: lighten(@tab-background-color-active, 10%) !important;
+    }
+    .tab.active {
       background-color: lighten(@tab-background-color-active, 10%) !important;
     }
 
@@ -115,9 +126,14 @@ atom-pane-container.cr-primary-container {
   }
 }
 
-atom-panel-container.left .tree-view:active {
-  box-shadow: 0px 0px 50px 15px white;
-  background-color: white;
+atom-panel-container.left .tree-view:focus .project-root-header,
+atom-panel-container.left .tree-view:focus-within .project-root-header {
+  // background: radial-gradient(
+  //   12em 100% at right,
+  //   @active-highlight-color 0%,
+  //   rgba(0,0,0,0) 100%
+  // );
+  background-color: lighten(@tab-background-color-active, 10%) !important;
 }
 
 // dev-only css:
