@@ -4,6 +4,9 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
+@active-highlight-color: rgba(255, 130, 0, 0.4);
+@hover-highlight-color: rgba(185, 225, 226, 0.4);
+
 // production css
 atom-pane-container.cr-primary-container {
   flex-direction: column;
@@ -27,7 +30,7 @@ atom-pane-container.cr-primary-container {
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
     // everything in here is only applied while in the OVERVIEW!
-    transform: scale(0.5);
+    transform: scale3d(0.5, 0.5, 1) perspective(1px);
 
     atom-pane.cr-patch {
       ul.tab-bar {
@@ -37,9 +40,13 @@ atom-pane-container.cr-primary-container {
         pointer-events: none;
       }
     }
+    atom-pane.cr-patch.active {
+      z-index: 1;
+      box-shadow: 0px 0px 50px 15px @active-highlight-color;
+    }
     atom-pane.cr-patch:hover {
       z-index: 2;
-      box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 50px 15px @hover-highlight-color;
     }
 
     atom-pane-resize-handle {
@@ -47,13 +54,57 @@ atom-pane-container.cr-primary-container {
     }
   }
 
-  // TODO: for empty-patches, will have the style for the fuzzy-finder here
+  // TODO: style for the fuzzy-finder here
+  .cr-patch .item-views {
+    .fuzzy-finder {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+      width: 100%;
+
+      atom-text-editor.mini {
+        height: 4em;
+        flex: 0 1 auto;
+      }
+      ol.list-group {
+        flex: 1 1 auto;
+      }
+      li.FuzzyFinderResult {
+        .file {
+          display: inline-flex;
+          flex-grow: 1;
+          margin-left: 2px;
+        }
+        .path {
+          display: inline-flex;
+          position: absolute;
+          right: 2em;
+        }
+        .status {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .cr-patch .cr-patch-background-tips .background-message .message {
+    font-size: large;
+  }
 
   // need this to 'pop' to user
   .cr-patch.active {
 
     // highlight active tabs to indicate active patch
-    .tab {
+    .tab-bar {
+      // background: radial-gradient(
+      //   12em 100% at right,
+      //   @active-highlight-color 0%,
+      //   rgba(0,0,0,0) 100%
+      // );
+      background-color: lighten(@tab-background-color-active, 10%) !important;
+    }
+    .tab.active {
       background-color: lighten(@tab-background-color-active, 10%) !important;
     }
 
@@ -61,16 +112,32 @@ atom-pane-container.cr-primary-container {
     // this may be removed with the fuzzy-finder search in the middle
     background-color: lighten(@base-background-color, 10%);
   }
+
+  .cr-patch .tab-bar li.placeholder {
+    display: none;
+  }
+  .cr-patch .tab-bar::before {
+    content: "CodeRibbon Patch";
+    position: absolute;
+    right: 3em;
+    font-style: italic;
+    font-weight: bold;
+    align-self: center;
+  }
+}
+
+atom-panel-container.left .tree-view:focus .project-root-header,
+atom-panel-container.left .tree-view:focus-within .project-root-header {
+  // background: radial-gradient(
+  //   12em 100% at right,
+  //   @active-highlight-color 0%,
+  //   rgba(0,0,0,0) 100%
+  // );
+  background-color: lighten(@tab-background-color-active, 10%) !important;
 }
 
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
-  .cr-patch::before {
-    content: "CodeRibbon Patch";
-    position: absolute;
-    align-self: center;
-    top: 6em;
-  }
   .cr-patch {
     // border: 2px solid rebeccapurple;
   }
