@@ -24,8 +24,14 @@ atom-pane-container.cr-primary-container {
   atom-pane-axis.cr-ribbon-container {
     overflow-x: visible;
     margin: 0px;
-    transition: transform ease 0.5s, transform-origin ease 0.5s;
+    transition: transform ease 0.5s,
+      transform-origin ease 0.5s;
     transform-origin: center;
+
+    atom-pane.cr-patch {
+      transition: box-shadow ease 0.2s;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {

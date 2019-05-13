@@ -10,7 +10,14 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.34.0 <2.0.0"
+    "atom": ">=1.36.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
   },
   "deserializers": {
     "CodeRibbonManager": "deserialize_CR_stuff",
