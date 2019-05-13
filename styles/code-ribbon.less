@@ -63,7 +63,7 @@ atom-pane-container.cr-primary-container {
       width: 100%;
 
       atom-text-editor.mini {
-        height: 4em;
+        max-height: 50%;
         flex: 0 1 auto;
       }
       ol.list-group {
@@ -115,6 +115,10 @@ atom-pane-container.cr-primary-container {
 
   .cr-patch .tab-bar li.placeholder {
     display: none;
+  }
+  .cr-patch .tab-bar:empty {
+    // because default themes makes :empty patches display none
+    display: inherit;
   }
   .cr-patch .tab-bar::before {
     content: "CodeRibbon Patch";
