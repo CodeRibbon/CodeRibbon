@@ -60,6 +60,12 @@ atom-pane-container.cr-primary-container {
     }
   }
 
+  atom-pane-axis.cr-ribbon-container.cr-focus-active {
+    atom-pane-axis.vertical:not(.active) {
+      flex-grow: 0;
+    }
+  }
+
   // TODO: style for the fuzzy-finder here
   .cr-patch .item-views {
     .fuzzy-finder {
@@ -144,6 +150,10 @@ atom-panel-container.left .tree-view:focus-within .project-root-header {
   //   rgba(0,0,0,0) 100%
   // );
   background-color: lighten(@tab-background-color-active, 10%) !important;
+}
+
+status-bar code-ribbon-status {
+  max-width: 60vw;
 }
 
 // dev-only css:

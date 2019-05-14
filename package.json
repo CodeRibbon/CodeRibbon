@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.36.0 <2.0.0"
+    "atom": ">=1.37.0 <2.0.0"
   },
   "consumedServices": {
     "status-bar": {
@@ -25,7 +25,20 @@
     "CodeRibbonSingleStrip": "deserialize_CR_stuff",
     "CodeRibbonPatch": "deserialize_CR_stuff"
   },
-  "dependencies": {},
+  "dependencies": {
+    "async": "0.2.6",
+    "atom-select-list": "^0.7.0",
+    "fs-plus": "^3.0.0",
+    "fuzzaldrin": "^2.0",
+    "fuzzaldrin-plus": "^0.6.0",
+    "@atom/fuzzy-native": "^1.0.1",
+    "humanize-plus": "~1.8.2",
+    "minimatch": "~3.0.3",
+    "temp": "~0.8.1",
+    "underscore-plus": "^1.7.0",
+    "vscode-ripgrep": "^1.2.5",
+    "wrench": "^1.5"
+  },
   "configSchema": {
     "pane_count_calc": {
       "type": "object",
