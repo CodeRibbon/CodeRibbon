@@ -61,8 +61,16 @@ atom-pane-container.cr-primary-container {
   }
 
   atom-pane-axis.cr-ribbon-container.cr-focus-active {
-    atom-pane-axis.vertical:not(.active) {
+    atom-pane-axis.vertical:not(.cr-focused) {
       flex-grow: 0;
+    }
+    atom-pane-axis.vertical.cr-focused {
+      atom-pane.cr-patch:not(.cr-focused) {
+        flex-grow: 0;
+      }
+      atom-pane.cr-patch.cr-focused {
+        flex-grow: 1;
+      }
     }
   }
 
