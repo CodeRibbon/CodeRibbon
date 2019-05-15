@@ -13,8 +13,8 @@
         "command": "code-ribbon:add-patch-column-right"
       },
       {
-        "label": "Destroy Patch Column",
-        "command": "code-ribbon:destroy-patch-column"
+        "label": "Close Patch Column",
+        "command": "code-ribbon:close-patch-column"
       },
       {
         "type": "separator"
