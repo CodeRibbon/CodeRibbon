@@ -28,9 +28,15 @@ atom-pane-container.cr-primary-container {
       transform-origin ease 0.5s;
     transform-origin: center;
 
+    // NOTE all the flex-grow transistions here need to be the same timing!!!
     atom-pane.cr-patch {
-      transition: box-shadow ease 0.2s;
+      transition:
+        box-shadow ease 0.2s,
+        flex-grow ease 0.5s;
       -webkit-font-smoothing: antialiased;
+    }
+    atom-pane-axis.cr-vertical-strip {
+      transition: flex-grow 0.5s ease;
     }
   }
 
@@ -38,13 +44,8 @@ atom-pane-container.cr-primary-container {
     // everything in here is only applied while in the OVERVIEW!
     transform: scale3d(0.5, 0.5, 1) perspective(1px);
 
-    atom-pane.cr-patch {
-      ul.tab-bar {
-        pointer-events: none;
-      }
-      div {
-        pointer-events: none;
-      }
+    atom-pane.cr-patch > * {
+      pointer-events: none;
     }
     atom-pane.cr-patch.active {
       z-index: 1;
@@ -61,15 +62,18 @@ atom-pane-container.cr-primary-container {
   }
 
   atom-pane-axis.cr-ribbon-container.cr-focus-active {
-    atom-pane-axis.vertical:not(.cr-focused) {
-      flex-grow: 0;
+    // !important is required to override inline rules
+    transition: width 0.5s ease;
+    max-width: 100% !important;
+    overflow: hidden;
+    atom-pane-axis.cr-vertical-strip:not(.cr-focused) {
+      flex-grow: 0 !important;
+      overflow: hidden;
     }
-    atom-pane-axis.vertical.cr-focused {
+    atom-pane-axis.cr-vertical-strip.cr-focused {
       atom-pane.cr-patch:not(.cr-focused) {
-        flex-grow: 0;
-      }
-      atom-pane.cr-patch.cr-focused {
-        flex-grow: 1;
+        flex-grow: 0 !important;
+        overflow: hidden;
       }
     }
   }
@@ -141,7 +145,7 @@ atom-pane-container.cr-primary-container {
     display: inherit;
   }
   .cr-patch .tab-bar::before {
-    content: "CodeRibbon Patch";
+    content: "CodeRibbon\00a0Patch";
     position: absolute;
     right: 3em;
     font-style: italic;
