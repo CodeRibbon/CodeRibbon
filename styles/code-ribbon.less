@@ -28,15 +28,17 @@ atom-pane-container.cr-primary-container {
       transform-origin ease 0.5s;
     transform-origin: center;
 
-    // NOTE all the flex-grow transistions here need to be the same timing!!!
     atom-pane.cr-patch {
+      height: 100%;
+      // NOTE all the flex transistions here need to have exact timing!!!
       transition:
         box-shadow ease 0.2s,
-        flex-grow ease 0.5s;
-      -webkit-font-smoothing: antialiased;
+        flex-grow ease 0.5s
+        width ease 0.5s;
     }
     atom-pane-axis.cr-vertical-strip {
-      transition: flex-grow 0.5s ease;
+      transition:
+        width ease 0.5s;
     }
   }
 
@@ -62,18 +64,17 @@ atom-pane-container.cr-primary-container {
   }
 
   atom-pane-axis.cr-ribbon-container.cr-focus-active {
-    // !important is required to override inline rules
-    transition: width 0.5s ease;
-    max-width: 100% !important;
-    overflow: hidden;
+    // overflow: hidden;
     atom-pane-axis.cr-vertical-strip:not(.cr-focused) {
-      flex-grow: 0 !important;
       overflow: hidden;
     }
     atom-pane-axis.cr-vertical-strip.cr-focused {
+      // overflow: visible;
       atom-pane.cr-patch:not(.cr-focused) {
-        flex-grow: 0 !important;
         overflow: hidden;
+      }
+      atom-pane.cr-patch.cr-focused {
+        // height: 100%;
       }
     }
   }
@@ -88,7 +89,8 @@ atom-pane-container.cr-primary-container {
 
       atom-text-editor.mini {
         max-height: 50%;
-        flex: 0 1 auto;
+        flex: 0 0 auto;
+        // overflow: unset;
       }
       ol.list-group {
         flex: 1 1 auto;
