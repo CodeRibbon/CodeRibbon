@@ -24,28 +24,38 @@ atom-pane-container.cr-primary-container {
   atom-pane-axis.cr-ribbon-container {
     overflow-x: visible;
     margin: 0px;
-    transition: transform ease 0.5s,
-      transform-origin ease 0.5s;
-    transform-origin: center;
+    transition: transform ease 0.5s;
+    transform-origin: 0 50% 0;
 
     atom-pane.cr-patch {
       height: 100%;
-      // NOTE all the flex transistions here need to have exact timing!!!
       transition:
-        box-shadow ease 0.2s,
-        flex-grow ease 0.5s
-        width ease 0.5s;
+        all 0.5s ease;
     }
     atom-pane-axis.cr-vertical-strip {
       transition:
-        width ease 0.5s;
+        none ease 0.5s;
+      // cols don't change width
+      flex-grow: 0;
+      flex-shrink: 0;
     }
   }
+  // .cr-ribbon-container::before,
+  // .cr-ribbon-container::after {
+  //   // content: "hi";
+  //   display: block;
+  //   width: 100px;
+  //   height: 100px;
+  //   flex: 1 1 100px;
+  // }
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
     // everything in here is only applied while in the OVERVIEW!
     transform: scale3d(0.5, 0.5, 1) perspective(1px);
 
+    atom-pane.cr-patch {
+      transform: scale(0.9);
+    }
     atom-pane.cr-patch > * {
       pointer-events: none;
     }
