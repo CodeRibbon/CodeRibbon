@@ -25,33 +25,46 @@ atom-pane-container.cr-primary-container {
     overflow-x: visible;
     margin: 0px;
     transition: transform ease 0.5s;
-    transform-origin: 0 50% 0;
+    will-change: transform;
+    // transform-origin: 0 50% 0;
 
     atom-pane.cr-patch {
       height: 100%;
       transition:
-        all 0.5s ease;
+        transform 0.5s ease;
+        will-change: transform;
     }
     atom-pane-axis.cr-vertical-strip {
-      transition:
-        none ease 0.5s;
       // cols don't change width
       flex-grow: 0;
       flex-shrink: 0;
     }
+
+    // .atom-pane-axis.cr-vertical-strip:first-child,
+    // .atom-pane-axis.cr-vertical-strip:last-child {
+    //   transition: 0.5s ease margin;
+    // }
   }
-  // .cr-ribbon-container::before,
-  // .cr-ribbon-container::after {
-  //   // content: "hi";
-  //   display: block;
-  //   width: 100px;
-  //   height: 100px;
-  //   flex: 1 1 100px;
-  // }
+  .cr-ribbon-container::after {
+    content: "";
+    display: block;
+    // width: 100px;
+    height: 100%;
+    visibility: hidden;
+
+    flex: 0 0 0%;
+    transition: flex .5s linear;
+    transition-delay: 1s;
+  }
+  .cr-ribbon-container.cr-overview-active::after {
+    flex: 0 0 100%;
+    transition: flex 0s linear;
+    transition-delay: 0s;
+  }
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
     // everything in here is only applied while in the OVERVIEW!
-    transform: scale3d(0.5, 0.5, 1) perspective(1px);
+    transform: scale(0.5) translateX(50%);
 
     atom-pane.cr-patch {
       transform: scale(0.9);
