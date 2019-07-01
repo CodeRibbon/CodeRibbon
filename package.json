@@ -1,7 +1,7 @@
 {
   "name": "code-ribbon",
   "main": "./lib/code-ribbon",
-  "version": "0.0.12",
+  "version": "0.0.22",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
   "repository": {
@@ -10,15 +10,35 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.34.0 <2.0.0"
+    "atom": ">=1.37.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
   },
   "deserializers": {
     "CodeRibbonManager": "deserialize_CR_stuff",
     "CodeRibbonRibbonContainer": "deserialize_CR_stuff",
-    "CodeRibbonSingleRibbon": "deserialize_CR_stuff",
+    "CodeRibbonSingleStrip": "deserialize_CR_stuff",
     "CodeRibbonPatch": "deserialize_CR_stuff"
   },
-  "dependencies": {},
+  "dependencies": {
+    "async": "0.2.6",
+    "atom-select-list": "^0.7.0",
+    "fs-plus": "^3.0.0",
+    "fuzzaldrin": "^2.0",
+    "fuzzaldrin-plus": "^0.6.0",
+    "humanize-plus": "~1.8.2",
+    "minimatch": "~3.0.3",
+    "scroll-into-view": "^1.9.7",
+    "temp": "~0.8.1",
+    "underscore-plus": "^1.7.0",
+    "vscode-ripgrep": "^1.2.5",
+    "wrench": "^1.5"
+  },
   "configSchema": {
     "pane_count_calc": {
       "type": "object",
@@ -88,6 +108,6 @@
     }
   },
   "devDependencies": {
-    "eslint": "^5.14.1"
+    "eslint": "^5.16.0"
   }
 }

@@ -1,26 +1,24 @@
 {
   "context-menu": {
-    "atom-text-editor": [
+    "atom-pane-axis.cr-vertical-strip": [
       {
-        "label": "Add Patch Column",
-        "command": "code-ribbon:add-patch-column"
+        "type": "separator"
+      },
+      {
+        "label": "Add Patch Column Left",
+        "command": "code-ribbon:add-patch-column-left"
+      },
+      {
+        "label": "Add Patch Column Right",
+        "command": "code-ribbon:add-patch-column-right"
+      },
+      {
+        "label": "Close Patch Column",
+        "command": "code-ribbon:close-patch-column"
+      },
+      {
+        "type": "separator"
       }
     ]
-  },
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "CodeRibbon",
-          "submenu": [
-            {
-              "label": "Add Patch Column",
-              "command": "code-ribbon:add-patch-column"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }
