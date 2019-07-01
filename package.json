@@ -26,8 +26,10 @@
     "CodeRibbonPatch": "deserialize_CR_stuff"
   },
   "dependencies": {
+    "@atom/fuzzy-native": "^1.0.3",
     "async": "0.2.6",
     "atom-select-list": "^0.7.0",
+    "etch": "^0.14.0",
     "fs-plus": "^3.0.0",
     "fuzzaldrin": "^2.0",
     "fuzzaldrin-plus": "^0.6.0",
