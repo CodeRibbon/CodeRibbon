@@ -14,3 +14,14 @@ As you open code to edit, your Ribbon grows to accomodate more active patches, l
  - `Ctrl-Alt-O` to look at all the Patches in Overview mode
  - Drag files from the project tree view onto Patches to open them
  - Swap Patches by dragging one item onto the other patch
+ - Keyboard shortcuts for navigating the ribbon
+ - Quick Fuzzy search files in the project for blank patches
+
+## A research project from UTK
+
+CodeRibbon is a research project from the University of Tennessee, Knoxville.
+
+The research is supported by Austin Henley. (one of Patchwork's original authors)
+
+For the contributors of CodeRibbon, see https://github.com/utk-se/CodeRibbon/graphs/contributors
+
