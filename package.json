@@ -1,7 +1,7 @@
 {
   "name": "code-ribbon",
   "main": "./lib/code-ribbon",
-  "version": "0.0.24",
+  "version": "0.0.26",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
   "repository": {
@@ -26,7 +26,6 @@
     "CodeRibbonPatch": "deserialize_CR_stuff"
   },
   "dependencies": {
-    "@atom/fuzzy-native": "^1.0.3",
     "async": "0.2.6",
     "atom-select-list": "^0.7.0",
     "etch": "^0.14.0",
