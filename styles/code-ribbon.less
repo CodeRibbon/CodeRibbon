@@ -4,5 +4,201 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.code-ribbon {
+@active-highlight-color: rgba(255, 130, 0, 0.4);
+@hover-highlight-color: rgba(185, 225, 226, 0.4);
+
+// production css
+atom-pane-container.cr-primary-container {
+  flex-direction: column;
+  overflow-x: scroll;
+
+  atom-pane-resize-handle.horizontal {
+    display: none;
+  }
+
+  atom-pane.pane ul.tab-bar li.tab {
+    width: 100%;
+    max-width: none;
+  }
+
+  atom-pane-axis.cr-ribbon-container {
+    overflow-x: visible;
+    margin: 0px;
+    transition: transform ease 0.5s;
+    will-change: transform;
+    // transform-origin: 0 50% 0;
+
+    atom-pane.cr-patch {
+      height: 100%;
+      transition:
+        transform 0.5s ease;
+        will-change: transform;
+    }
+    atom-pane-axis.cr-vertical-strip {
+      // cols don't change width
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    // .atom-pane-axis.cr-vertical-strip:first-child,
+    // .atom-pane-axis.cr-vertical-strip:last-child {
+    //   transition: 0.5s ease margin;
+    // }
+  }
+  .cr-ribbon-container::after {
+    content: "";
+    display: block;
+    // width: 100px;
+    height: 100%;
+    visibility: hidden;
+
+    flex: 0 0 0%;
+    transition: flex .5s linear;
+    transition-delay: 1s;
+  }
+  .cr-ribbon-container.cr-overview-active::after {
+    flex: 0 0 100%;
+    transition: flex 0s linear;
+    transition-delay: 0s;
+  }
+
+  atom-pane-axis.cr-ribbon-container.cr-overview-active {
+    // everything in here is only applied while in the OVERVIEW!
+    transform: scale(0.5) translateX(50%);
+
+    atom-pane.cr-patch {
+      transform: scale(0.9);
+    }
+    atom-pane.cr-patch > * {
+      pointer-events: none;
+    }
+    atom-pane.cr-patch.active {
+      z-index: 1;
+      box-shadow: 0px 0px 50px 15px @active-highlight-color;
+    }
+    atom-pane.cr-patch:hover {
+      z-index: 2;
+      box-shadow: 0px 0px 50px 15px @hover-highlight-color;
+    }
+
+    atom-pane-resize-handle {
+      pointer-events: none;
+    }
+  }
+
+  atom-pane-axis.cr-ribbon-container.cr-focus-active {
+    // overflow: hidden;
+    atom-pane-axis.cr-vertical-strip:not(.cr-focused) {
+      overflow: hidden;
+    }
+    atom-pane-axis.cr-vertical-strip.cr-focused {
+      // overflow: visible;
+      atom-pane.cr-patch:not(.cr-focused) {
+        overflow: hidden;
+      }
+      atom-pane.cr-patch.cr-focused {
+        // height: 100%;
+      }
+    }
+  }
+
+  // TODO: style for the fuzzy-finder here
+  .cr-patch .item-views {
+    .fuzzy-finder {
+      display: flex;
+      flex-flow: column;
+      height: 100%;
+      width: 100%;
+
+      atom-text-editor.mini {
+        max-height: 50%;
+        flex: 0 0 auto;
+        // overflow: unset;
+      }
+      ol.list-group {
+        flex: 1 1 auto;
+      }
+      li.FuzzyFinderResult {
+        .file {
+          display: inline-flex;
+          flex-grow: 1;
+          margin-left: 2px;
+        }
+        .path {
+          display: inline-flex;
+          position: absolute;
+          right: 2em;
+        }
+        .status {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .cr-patch .cr-patch-background-tips .background-message .message {
+    font-size: large;
+  }
+
+  // need this to 'pop' to user
+  .cr-patch.active {
+
+    // highlight active tabs to indicate active patch
+    .tab-bar {
+      // background: radial-gradient(
+      //   12em 100% at right,
+      //   @active-highlight-color 0%,
+      //   rgba(0,0,0,0) 100%
+      // );
+      background-color: lighten(@tab-background-color-active, 10%) !important;
+    }
+    .tab.active {
+      background-color: lighten(@tab-background-color-active, 10%) !important;
+    }
+
+    // empty patches are entirely highlited
+    // this may be removed with the fuzzy-finder search in the middle
+    background-color: lighten(@base-background-color, 10%);
+  }
+
+  .cr-patch .tab-bar li.placeholder {
+    display: none;
+  }
+  .cr-patch .tab-bar:empty {
+    // because default themes makes :empty patches display none
+    display: inherit;
+  }
+  .cr-patch .tab-bar::before {
+    content: "CodeRibbon\00a0Patch";
+    position: absolute;
+    right: 3em;
+    font-style: italic;
+    font-weight: bold;
+    align-self: center;
+  }
+}
+
+atom-panel-container.left .tree-view:focus .project-root-header,
+atom-panel-container.left .tree-view:focus-within .project-root-header {
+  // background: radial-gradient(
+  //   12em 100% at right,
+  //   @active-highlight-color 0%,
+  //   rgba(0,0,0,0) 100%
+  // );
+  background-color: lighten(@tab-background-color-active, 10%) !important;
+}
+
+status-bar code-ribbon-status {
+  max-width: 60vw;
+}
+
+// dev-only css:
+atom-pane-container.cr-primary-container.cr-dev-active {
+  .cr-patch {
+    // border: 2px solid rebeccapurple;
+  }
+  .cr-patch.active {
+    // border: 2px solid blue;
+  }
 }

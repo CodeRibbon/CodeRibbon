@@ -1,4 +1,8 @@
-Copyright (c) 2019 <Your name here>
+Copyright (c) 2019:
+Austin Henley (azhenley)
+Ben Klein (robobenklein)
+Thomas Keyes (tkeyes25)
+*et al* (`git shortlog -sn`)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
