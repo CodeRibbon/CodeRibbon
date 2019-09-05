@@ -1,16 +1,4 @@
-
 _site/
 .sass-cache/
 .jekyll-metadata
-
-# Vim stuff
-
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-
-node_modules/
 vendor/

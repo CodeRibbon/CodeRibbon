@@ -1,30 +1,15 @@
-<nav class="navbar navbar-expand-md navbar-static-top navbar-dark" role="navigation">
-  <div class="container">
-    <div class="navbar-header" style="width: inherit;">
-      <button type="button" class="navbar-toggler collapsed d-md-none"
-          data-toggle="collapse" data-target="#topbar-navbar-collapse-1"
-          aria-controls="topbar-navbar-collapse-1", aria-expanded="false"
-          style="float: right;">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="topnav navbar-brand" href="{{ site.baseurl }}/">CodeRibbon</a>
-    </div>
-    <div class="collapse navbar-collapse" id="topbar-navbar-collapse-1">
-      <ul class="nav navbar-nav" style="flex-wrap: nowrap;">
-        {% for item in site.data.navigation %}
-        {% if link.url contains 'http' %}
-        {% assign domain = '' %}
-        {% else %}
-        {% assign domain = site.baseurl %}
-        {% endif %}
-        <li class="{% if page.permalink == item.link %}active{% endif %}">
-          <a href="{{ domain }}{{ item.link }}" class="nav-item nav-link">
-            {{ item.name }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+<nav>
+	<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
+	{% for link in site.data.navigation %}
+		{% assign class = "" %}
+		{% if link.highlight %}
+			{% assign class = class | append: " highlight" %}
+		{% endif %}
+
+		{% if link.link == page.url %}
+			{% assign class = class | append: " active" %}
+		{% endif %}
+		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+	{% endfor %}
 </nav>
