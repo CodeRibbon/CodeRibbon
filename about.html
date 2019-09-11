@@ -1,14 +1,15 @@
 ---
 title: Our team
-description: We've built an amazing team of developers, marketers, designers and sales people.
+description: People who've made CodeRibbon what it is today.
 ---
 <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
 <ul class="staff">
 	{% for person in site.staff_members %}
 		<li>
 			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
-			<div class="name"><a target="_blank" href="https://twitter.com/{{ person.twitter }}">{{ person.name }}</a></div>
-			<div class="position">{{ person.position }}</div>
+			<div class="name"><p><a target="_blank" href="{{ person.profilelink }}">{{ person.name }}</a></p></div>
+			<div class="position"><p>{{ person.position }}</p></div>
+			<div class="position">{{ person.blurb }}</div>
 		</li>
 	{% endfor %}
 </ul>
