@@ -1,8 +1,4 @@
-- name: Pricing
-  link: /pricing/
-  new_window: false
-  highlight: false
-- name: Blog
+- name: News
   link: /blog/
   new_window: false
   highlight: false
@@ -14,11 +10,11 @@
   link: /contact/
   new_window: false
   highlight: false
-- name: Login
-  link: /
+- name: GitHub
+  link: https://github.com/utk-se/CodeRibbon/
   new_window: true
   highlight: false
-- name: Sign Up
-  link: /
+- name: Atom.io
+  link: https://atom.io/packages/code-ribbon
   new_window: true
   highlight: true

@@ -1,39 +1,30 @@
 - links:
-  - name: Pricing
-    link: /pricing/
-  - name: Blog
+  - name: News
     link: /blog/
   - name: About
     link: /about/
   - name: Contact
     link: /contact/
 - links:
-  - name: Login
+  - name: Atom.io
     link: /
     new_window: true
-  - name: Sign Up
-    link: /
+  - name: GitHub Repo
+    link: https://github.com/utk-se/CodeRibbon
     new_window: true
-  - name: Docs
-    link: /
-    new_window: true
-  - name: Status
-    link: /
+  - name: Wiki
+    link: https://github.com/utk-se/CodeRibbon/wiki
     new_window: true
 - links:
-  - name: Facebook
-    link: https://facebook.com/cloudcannon/
+  - name: UTK EECS
+    link: https://www.eecs.utk.edu/
     new_window: true
-    social_icon: Facebook
-  - name: Twitter
-    link: https://twitter.com/cloudcannon/
-    social_icon: Twitter
+    social_icon: UTK
+  - name: UTK SE GitHub
+    link: https://github.com/utk-se/
+    social_icon: GitHub
     new_window: true
-  - name: YouTube
-    link: https://youtube.com/cloudcannon/
-    social_icon: YouTube
-    new_window: true
-  - name: RSS
+  - name: News RSS
     link: /feed.xml
     social_icon: RSS
     new_window: false
