@@ -124,7 +124,7 @@ blockquote:before {
 	overflow: hidden;
 	margin: 25px auto 0 auto;
 	position: relative;
-	border-radius: 200px;
+	border-radius: 20px;
 
 	img {
 		position: absolute;
@@ -133,7 +133,26 @@ blockquote:before {
 		top: -1000%;
 		bottom: -1000%;
 		margin: auto;
-		width: 300px;
+		// width: 300px;
+	}
+}
+
+.rect-image {
+	width: 150px;
+	height: 250px;
+	overflow: hidden;
+	margin: 25px auto 0 auto;
+	position: relative;
+	border-radius: 20px;
+
+	img {
+		position: absolute;
+		left: -1000%;
+		right: -1000%;
+		top: -1000%;
+		bottom: -1000%;
+		margin: auto;
+		// width: 300px;
 	}
 }
 

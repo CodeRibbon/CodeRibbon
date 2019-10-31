@@ -27,6 +27,15 @@
 			}
 		}
 
+	.rect-image {
+		width: 200px;
+		height: 300px;
+			img {
+				border-radius: 60px;
+			}
+		}
+
+
 	.name {
 		font-size: 1.3em;
 		margin-top: 20px;
