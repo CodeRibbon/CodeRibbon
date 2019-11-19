@@ -11,6 +11,7 @@
 atom-pane-container.cr-primary-container {
   flex-direction: column;
   overflow-x: scroll;
+  scroll-snap-type: x proximity;
 
   atom-pane-resize-handle.horizontal {
     display: none;
@@ -38,6 +39,9 @@ atom-pane-container.cr-primary-container {
       // cols don't change width
       flex-grow: 0;
       flex-shrink: 0;
+
+      // stay attached to a border
+      scroll-snap-align: start;
     }
 
     // .atom-pane-axis.cr-vertical-strip:first-child,
