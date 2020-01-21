@@ -42,6 +42,27 @@
     "wrench": "^1.5"
   },
   "configSchema": {
+    "metrics_preference": {
+      "title": "Metrics reporting preference",
+      "order": 10,
+      "description": "Help improve CodeRibbon and contribute to academic usability research by enabling completely anonymous and non-identifiable usage reporting!",
+      "type": "string",
+      "default": "disabled",
+      "enum": [
+        {
+          "value": "disabled",
+          "description": "Disabled - entire metrics system is disabled."
+        },
+        {
+          "value": "remote",
+          "description": "Send metrics events directly to official CodeRibbon metrics analysis server."
+        },
+        {
+          "value": "local",
+          "description": "Store metrics events in RAM, which can then be exported to file."
+        }
+      ]
+    },
     "pane_count_calc": {
       "type": "object",
       "order": 30,
