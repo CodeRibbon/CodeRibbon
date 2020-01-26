@@ -71,15 +71,15 @@
           "title": "Horizontal Pane Count",
           "order": 32,
           "type": "string",
-          "default": "number",
+          "default": "linelength",
           "enum": [
+            {
+              "value": "linelength",
+              "description": "Use your preference for the editor Preferred Line Width"
+            },
             {
               "value": "number",
               "description": "Use a specific number of panes."
-            },
-            {
-              "value": "minpixels",
-              "description": "Fit max number of panes using min width."
             }
           ]
         },
@@ -90,12 +90,12 @@
           "type": "integer",
           "default": 3
         },
-        "pane_count_horizontal_min_pixels": {
-          "title": "Minimum Pixel Width",
+        "pane_count_horizontal_min_chars": {
+          "title": "Minimum Characters Wide",
           "order": 34,
-          "description": "Minimum width in pixels for a single pane.",
+          "description": "Minimum number of characters wide a patch should be.",
           "type": "integer",
-          "default": 300
+          "default": 80
         },
         "pane_count_vertical_mode": {
           "title": "Vertical Pane Count",
@@ -104,12 +104,12 @@
           "default": "number",
           "enum": [
             {
-              "value": "number",
-              "description": "Use a specific number of vertical strips."
+              "value": "minlines",
+              "description": "Fit max number of patches with minimum N lines per patch."
             },
             {
-              "value": "minpixels",
-              "description": "Fit max number of panes using min height."
+              "value": "number",
+              "description": "Use a specific number of vertical strips."
             }
           ]
         },
@@ -120,12 +120,12 @@
           "type": "integer",
           "default": 2
         },
-        "pane_count_vertical_min_pixels": {
-          "title": "Minimum Pixel Height",
+        "pane_count_vertical_min_lines": {
+          "title": "Minimum Lines per Patch",
           "order": 37,
-          "description": "Minimum height in pixels for a single pane.",
+          "description": "Minimum number of lines for a single patch.",
           "type": "integer",
-          "default": 420
+          "default": 20
         }
       }
     }
