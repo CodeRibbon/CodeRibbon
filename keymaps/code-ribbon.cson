@@ -16,6 +16,9 @@
   'l': 'unset!'
   'enter': 'unset!'
 
+'.cr-overview-active atom-text-editor:not([mini])':
+  'enter': 'unset!'
+
 '.cr-overview-active,.cr-overview-active .cr-patch':
   'escape': "code-ribbon:toggle-overview"
   'enter':  "code-ribbon:toggle-overview"
