@@ -19,7 +19,7 @@ atom-pane-container.cr-primary-container {
 
   atom-pane.pane ul.tab-bar li.tab {
     width: 100%;
-    max-width: none;
+    max-width: none !important;
   }
 
   atom-pane-axis.cr-ribbon-container {
@@ -33,7 +33,7 @@ atom-pane-container.cr-primary-container {
       height: 100%;
       transition:
         transform 0.5s ease;
-        will-change: transform;
+      will-change: transform;
     }
     atom-pane-axis.cr-vertical-strip {
       // cols don't change width
@@ -76,7 +76,9 @@ atom-pane-container.cr-primary-container {
     atom-pane.cr-patch {
       transform: scale(0.9);
     }
-    atom-pane.cr-patch > * {
+    atom-pane.cr-patch > .item-views,
+    // atom-pane.cr-patch > .tab-bar .close-icon {
+    atom-pane.cr-patch > .tab-bar {
       pointer-events: none;
     }
     atom-pane.cr-patch.active {
