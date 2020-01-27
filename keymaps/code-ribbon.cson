@@ -1,13 +1,19 @@
 
+# fuzzy finder select list conflicts
 '.cr-overview-active .select-list atom-text-editor.mini':
   'enter': 'unset!'
   'return': 'unset!'
 
+# vim mode conflicts
 '.cr-overview-active atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'left': 'unset!'
+  'h': 'unset!'
   'down': 'unset!'
+  'j': 'unset!'
   'up': 'unset!'
+  'k': 'unset!'
   'right': 'unset!'
+  'l': 'unset!'
   'enter': 'unset!'
 
 '.cr-overview-active,.cr-overview-active .cr-patch':
