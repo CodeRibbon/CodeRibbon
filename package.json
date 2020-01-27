@@ -86,14 +86,14 @@
         "pane_count_horizontal_number": {
           "title": "Number of horizontal panes",
           "order": 33,
-          "description": "How many horizontal panes per view?",
+          "description": "Choose an exact number of patches to show per screen horizontally. Also is used as the fallback in case automatic width detection fails.",
           "type": "integer",
           "default": 3
         },
         "pane_count_horizontal_min_chars": {
           "title": "Minimum Characters Wide",
           "order": 34,
-          "description": "Minimum number of characters wide a patch should be.",
+          "description": "Choose how many columns a patch needs to show at minimum in order to be useful. In automatic width mode using your editor preferred line length, this is used as a fallback value.",
           "type": "integer",
           "default": 80
         },

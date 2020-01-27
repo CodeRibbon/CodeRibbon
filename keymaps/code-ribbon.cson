@@ -29,7 +29,7 @@
   'right':  'window:focus-pane-on-right'
   'l':      'window:focus-pane-on-right'
 
-'.platform-win32,.platform-linux':
+'.platform-win32,.platform-linux,.platform-darwin':
   "ctrl-alt-o": "code-ribbon:toggle-overview"
   # focus pane
   'ctrl-k left':        'window:focus-pane-on-left'
@@ -43,24 +43,30 @@
   # scroll ribbon
   'ctrl-j left':        'code-ribbon:scroll-ribbon-left'
   'ctrl-j h':           'code-ribbon:scroll-ribbon-left'
+  'ctrl-j ctrl-h':      'code-ribbon:scroll-ribbon-left'
   'ctrl-j right':       'code-ribbon:scroll-ribbon-right'
   'ctrl-j l':           'code-ribbon:scroll-ribbon-right'
+  'ctrl-j ctrl-l':      'code-ribbon:scroll-ribbon-right'
   # move pane item
   'ctrl-k shift-left':  'window:move-active-item-to-pane-on-left'
+  'ctrl-k shift-h':  'window:move-active-item-to-pane-on-left'
   'ctrl-k shift-right': 'window:move-active-item-to-pane-on-right'
+  'ctrl-k shift-l': 'window:move-active-item-to-pane-on-right'
   'ctrl-k shift-up':    'window:move-active-item-to-pane-above'
+  'ctrl-k shift-k':    'window:move-active-item-to-pane-above'
   'ctrl-k shift-down':  'window:move-active-item-to-pane-below'
+  'ctrl-k shift-j':  'window:move-active-item-to-pane-below'
 
 
-'.platform-darwin':
-  "cmd-alt-o": "code-ribbon:toggle-overview"
-  # focus pane
-  'cmd-k left':        'window:focus-pane-on-left'
-  'cmd-k right':       'window:focus-pane-on-right'
-  'cmd-k up':          'window:focus-pane-above'
-  'cmd-k down':        'window:focus-pane-below'
-  # move pane item
-  'cmd-k shift-left':  'window:move-active-item-to-pane-on-left'
-  'cmd-k shift-right': 'window:move-active-item-to-pane-on-right'
-  'cmd-k shift-up':    'window:move-active-item-to-pane-above'
-  'cmd-k shift-down':  'window:move-active-item-to-pane-below'
+# '.platform-darwin':
+#   "cmd-alt-o": "code-ribbon:toggle-overview"
+#   # focus pane
+#   'cmd-k left':        'window:focus-pane-on-left'
+#   'cmd-k right':       'window:focus-pane-on-right'
+#   'cmd-k up':          'window:focus-pane-above'
+#   'cmd-k down':        'window:focus-pane-below'
+#   # move pane item
+#   'cmd-k shift-left':  'window:move-active-item-to-pane-on-left'
+#   'cmd-k shift-right': 'window:move-active-item-to-pane-on-right'
+#   'cmd-k shift-up':    'window:move-active-item-to-pane-above'
+#   'cmd-k shift-down':  'window:move-active-item-to-pane-below'
