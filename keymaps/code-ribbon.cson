@@ -43,6 +43,9 @@
   'ctrl-k k':           'window:focus-pane-above'
   'ctrl-k right':       'window:focus-pane-on-right'
   'ctrl-k l':           'window:focus-pane-on-right'
+  # replace tabs with moving through the ribbon
+  'ctrl-tab':           'window:focus-next-pane'
+  'ctrl-shift-tab':     'window:focus-previous-pane'
   # scroll ribbon
   'ctrl-j left':        'code-ribbon:scroll-ribbon-left'
   'ctrl-j h':           'code-ribbon:scroll-ribbon-left'
