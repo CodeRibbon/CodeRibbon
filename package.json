@@ -75,11 +75,11 @@
           "enum": [
             {
               "value": "linelength",
-              "description": "Use your preference for the editor Preferred Line Width"
+              "description": "Automatic: Use your preference for the editor Preferred Line Width"
             },
             {
               "value": "number",
-              "description": "Use a specific number of panes."
+              "description": "Manual: Use a specific number of panes."
             }
           ]
         },
@@ -105,7 +105,7 @@
           "enum": [
             {
               "value": "minlines",
-              "description": "Fit max number of patches with minimum N lines per patch."
+              "description": "[UNSUPPORTED] Fit max number of patches with minimum N lines per patch."
             },
             {
               "value": "number",
@@ -116,7 +116,7 @@
         "pane_count_vertical_number": {
           "title": "Number of vertical strips",
           "order": 36,
-          "description": "How many vertical pane strips per view?",
+          "description": "How many vertical patches should new columns be initialized with?",
           "type": "integer",
           "default": 2
         },
