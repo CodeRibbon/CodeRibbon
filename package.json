@@ -38,7 +38,7 @@
     "scroll-into-view": "^1.14.2",
     "temp": "^0.8.4",
     "underscore-plus": "^1.7.0",
-    "vscode-ripgrep": "^1.5.8",
+    "vscode-ripgrep": "^1.8.0",
     "wrench": "^1.5"
   },
   "configSchema": {
