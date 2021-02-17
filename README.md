@@ -2,6 +2,8 @@
 
 A reimplementation of Patchworks for the Atom Editor.
 
+![Overmode Mode Demo](https://user-images.githubusercontent.com/5423266/108159222-8bfd7580-70b4-11eb-88f6-acd10847982a.gif)
+
 Patchworks was a 2014 research project into better navigation and organization of code in IDEs. It's core concept consisted of an infinite 'Ribbon' of Patches in which code was displayed.
 
 As you open code to edit, your Ribbon grows to accommodate more active patches, leaving a timeline-like history of recently used files.
