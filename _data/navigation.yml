@@ -1,7 +1,7 @@
-- name: News
-  link: /blog/
-  new_window: false
-  highlight: false
+# - name: News
+#   link: /blog/
+#   new_window: false
+#   highlight: false
 - name: About
   link: /about/
   new_window: false
@@ -14,7 +14,7 @@
   link: https://github.com/utk-se/CodeRibbon/
   new_window: true
   highlight: false
-- name: Atom.io
+- name: Get CodeRibbon
   link: https://atom.io/packages/code-ribbon
   new_window: true
   highlight: true

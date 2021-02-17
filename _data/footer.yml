@@ -1,13 +1,13 @@
 - links:
-  - name: News
-    link: /blog/
+  - name: Home
+    link: /
   - name: About
     link: /about/
   - name: Contact
     link: /contact/
 - links:
   - name: Atom.io
-    link: /
+    link: https://atom.io/packages/code-ribbon
     new_window: true
   - name: GitHub Repo
     link: https://github.com/utk-se/CodeRibbon
@@ -24,7 +24,6 @@
     link: https://github.com/utk-se/
     social_icon: GitHub
     new_window: true
-  - name: News RSS
-    link: /feed.xml
-    social_icon: RSS
-    new_window: false
+  - name: UTK PAIRS (Lab)
+    link: https://pairs.eecs.utk.edu/
+    new_window: true
