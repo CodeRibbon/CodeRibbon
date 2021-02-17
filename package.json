@@ -78,24 +78,28 @@
               "description": "Automatic: Use your preference for the editor Preferred Line Width"
             },
             {
+              "value": "cr-linelength",
+              "description": "Automatic: Use the Minimum Characters Wide setting below"
+            },
+            {
               "value": "number",
               "description": "Manual: Use a specific number of panes."
             }
           ]
         },
+        "pane_count_horizontal_min_chars": {
+          "title": "Automatic: Minimum Characters Wide",
+          "order": 34,
+          "description": "Choose how many columns a patch needs to show at minimum in order to be useful. Please change the above setting to activate this.",
+          "type": "integer",
+          "default": 80
+        },
         "pane_count_horizontal_number": {
-          "title": "Number of horizontal panes",
+          "title": "Manual: Number of horizontal panes",
           "order": 33,
           "description": "Choose an exact number of patches to show per screen horizontally. Also is used as the fallback in case automatic width detection fails.",
           "type": "integer",
           "default": 3
-        },
-        "pane_count_horizontal_min_chars": {
-          "title": "Minimum Characters Wide",
-          "order": 34,
-          "description": "Choose how many columns a patch needs to show at minimum in order to be useful. In automatic width mode using your editor preferred line length, this is used as a fallback value.",
-          "type": "integer",
-          "default": 80
         },
         "pane_count_vertical_mode": {
           "title": "Vertical Pane Count",
