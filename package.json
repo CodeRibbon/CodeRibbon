@@ -55,11 +55,11 @@
         },
         {
           "value": "remote",
-          "description": "Send metrics events directly to official CodeRibbon metrics analysis server."
+          "description": "Not yet implemented: Send metrics events directly to the official CodeRibbon metrics analysis server."
         },
         {
           "value": "local",
-          "description": "Store metrics events in RAM, which can then be exported to file."
+          "description": "Store metrics events in RAM, which can then be exported to file for later analysis."
         }
       ]
     },
@@ -68,14 +68,14 @@
       "order": 30,
       "properties": {
         "pane_count_horizontal_mode": {
-          "title": "Horizontal Pane Count",
+          "title": "Horizontal Patch Count",
           "order": 32,
           "type": "string",
           "default": "linelength",
           "enum": [
             {
               "value": "linelength",
-              "description": "Automatic: Use your preference for the editor Preferred Line Width"
+              "description": "Automatic: Use your preference for the editor's Preferred Line Width"
             },
             {
               "value": "cr-linelength",
@@ -83,7 +83,7 @@
             },
             {
               "value": "number",
-              "description": "Manual: Use a specific number of panes."
+              "description": "Manual: Use a specific number of horizontal patches."
             }
           ]
         },
@@ -95,41 +95,18 @@
           "default": 80
         },
         "pane_count_horizontal_number": {
-          "title": "Manual: Number of horizontal panes",
+          "title": "Manual: Number of horizontal patches",
           "order": 33,
-          "description": "Choose an exact number of patches to show per screen horizontally. Also is used as the fallback in case automatic width detection fails.",
+          "description": "Choose an exact number of patches to show per screen horizontally. This setting is also is used as the fallback in case automatic width detection fails.",
           "type": "integer",
           "default": 3
         },
-        "pane_count_vertical_mode": {
-          "title": "Vertical Pane Count",
-          "order": 35,
-          "type": "string",
-          "default": "number",
-          "enum": [
-            {
-              "value": "minlines",
-              "description": "[UNSUPPORTED] Fit max number of patches with minimum N lines per patch."
-            },
-            {
-              "value": "number",
-              "description": "Use a specific number of vertical strips."
-            }
-          ]
-        },
         "pane_count_vertical_number": {
-          "title": "Number of vertical strips",
+          "title": "Number of Patches per Column",
           "order": 36,
           "description": "How many vertical patches should new columns be initialized with?",
           "type": "integer",
           "default": 2
-        },
-        "pane_count_vertical_min_lines": {
-          "title": "Minimum Lines per Patch",
-          "order": 37,
-          "description": "Minimum number of lines for a single patch.",
-          "type": "integer",
-          "default": 20
         }
       }
     }
