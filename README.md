@@ -10,14 +10,16 @@ As you open code to edit, your Ribbon grows to accommodate more active patches, 
 
 ## Currently Working Features
 
- - Normal Atom editing, plugins, etc, all still supported
+ - 99.9% of other Atom plugins are still supported and work as usual
+   - If you find one that doesn't, please leave an issue for it!
  - Patch grid layout and dynamic growth of the Ribbon.
- - Configurable size for number of Ribbons and Patches per screen
+ - Configurable, dynamic size for number of Patches per screen
  - `Ctrl-Alt-O` to look at all the Patches in Overview mode
- - Drag files from the project tree view onto Patches to open them
+ - Drag files from the project tree view onto Patches to open the file
  - Swap Patches by dragging one item onto the other patch
  - Keyboard shortcuts for navigating the ribbon
  - Quick Fuzzy search files in the project for blank patches
+ - Drag and drop patches onto eachother to create new patches and columns
 
 ## A research project from UTK
 
