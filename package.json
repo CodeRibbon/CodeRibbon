@@ -1,7 +1,7 @@
 {
   "name": "code-ribbon",
   "main": "./lib/code-ribbon",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
   "repository": {
@@ -116,19 +116,24 @@
       "description": "When adding items to the ribbon without any empty patches on-screen, where should they be created?",
       "type": "string",
       "default": "nearest_right",
-      "enum": [{
-        "value": "ribbon_tail",
-        "description": "Always at the end of the ribbon, leaving prior empty patches alone"
-      }, {
-        "value": "new_column",
-        "description": "Create a new column right next to your currently focused one"
-      }, {
-        "value": "nearest_right",
-        "description": "Find the closest empty patch rightwards of your current position"
-      }, {
-        "value": "split_down",
-        "description": "Add a patch to the current column"
-      }]
+      "enum": [
+        {
+          "value": "ribbon_tail",
+          "description": "Always at the end of the ribbon, leaving prior empty patches alone"
+        },
+        {
+          "value": "new_column",
+          "description": "Create a new column right next to your currently focused one"
+        },
+        {
+          "value": "nearest_right",
+          "description": "Find the closest empty patch rightwards of your current position"
+        },
+        {
+          "value": "split_down",
+          "description": "Add a patch to the current column"
+        }
+      ]
     }
   },
   "devDependencies": {
