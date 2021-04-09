@@ -36,13 +36,17 @@
   "ctrl-alt-o": "code-ribbon:toggle-overview"
   # focus pane
   'ctrl-k left':        'window:focus-pane-on-left'
-  'ctrl-k h':           'window:focus-pane-on-left'
+  # 'ctrl-k h':           'window:focus-pane-on-left'
   'ctrl-k down':        'window:focus-pane-below'
-  'ctrl-k j':           'window:focus-pane-below'
+  # 'ctrl-k j':           'window:focus-pane-below'
   'ctrl-k up':          'window:focus-pane-above'
-  'ctrl-k k':           'window:focus-pane-above'
+  # 'ctrl-k k':           'window:focus-pane-above'
   'ctrl-k right':       'window:focus-pane-on-right'
-  'ctrl-k l':           'window:focus-pane-on-right'
+  # 'ctrl-k l':           'window:focus-pane-on-right'
+  'alt-h':           'window:focus-pane-on-left'
+  'alt-j':           'window:focus-pane-below'
+  'alt-k':           'window:focus-pane-above'
+  'alt-l':           'window:focus-pane-on-right'
   # replace tabs with moving through the ribbon
   'ctrl-tab':           'window:focus-next-pane'
   'ctrl-shift-tab':     'window:focus-previous-pane'
