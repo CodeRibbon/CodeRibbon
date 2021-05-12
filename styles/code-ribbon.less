@@ -10,9 +10,13 @@
 // production css
 atom-pane-container.cr-primary-container {
   flex-direction: column;
-  overflow-x: scroll;
+  // overflow-x: visible;
   overflow-y: hidden;
   scroll-snap-type: x proximity;
+  &.cr-overview-active,
+  &.cr-managed-scroll-active {
+    scroll-snap-type: none;
+  }
 
   atom-pane-resize-handle.horizontal {
     display: none;
@@ -65,14 +69,14 @@ atom-pane-container.cr-primary-container {
     transition-delay: 1s;
   }
   .cr-ribbon-container.cr-overview-active::after {
-    flex: 0 0 100%;
-    transition: flex 0s linear;
-    transition-delay: 0s;
+    // flex: 0 0 100%;
+    // transition: flex 0s linear;
+    // transition-delay: 0s;
   }
 
   atom-pane-axis.cr-ribbon-container.cr-overview-active {
     // everything in here is only applied while in the OVERVIEW!
-    transform: scale(0.5) translateX(50%);
+    transform: scale(0.5) translateX(0%);
 
     atom-pane.cr-patch {
       transform: scale(0.9);

@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=1.47.0 <2.0.0"
+    "atom": ">=1.57.0 <2.0.0"
   },
   "consumedServices": {
     "status-bar": {
