@@ -34,6 +34,7 @@
 
 '.platform-win32,.platform-linux,.platform-darwin':
   "ctrl-alt-o": "code-ribbon:toggle-overview"
+  "ctrl-k z": "code-ribbon:zoom-patch"
   # focus pane
   'ctrl-k left':        'window:focus-pane-on-left'
   # 'ctrl-k h':           'window:focus-pane-on-left'
