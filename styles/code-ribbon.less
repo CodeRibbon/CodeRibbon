@@ -205,9 +205,101 @@ status-bar code-ribbon-status {
 // dev-only css:
 atom-pane-container.cr-primary-container.cr-dev-active {
   .cr-patch {
-    // border: 2px solid rebeccapurple;
+    .tab-bar {
+      .tab {
+        .title {
+          font-size: 1.4em;
+          text-align: center;
+        }
+      }
+    }
   }
-  .cr-patch.active {
-    // border: 2px solid blue;
+  // .cr-patch.active {
+  //   border: 2px solid blue;
+  // }
+  atom-pane-axis.cr-ribbon-container.cr-overview-active {
+    atom-pane-resize-handle.horizontal {
+      display: block;
+      width: 0;
+      box-shadow: 0px 0px 0px 4px #444;
+    }
+    atom-pane-resize-handle.horizontal::before {
+      position: absolute;
+      // color: black;
+      width: 4em;
+      height: 4em;
+      box-sizing: border-box;
+      border-color: white;
+      border-width: 20px;
+      border-radius: 50% 50% 50% 0;
+      background-color: #444;
+      transform: translateY(-4.1em);
+    }
+    atom-pane-resize-handle.horizontal::after {
+      content: '';
+      --t: 4px;
+      --c1:#fff;
+      --c2:transparent;
+      display: block;
+      position: absolute;
+
+      width: 2.4em;
+      height: 2.4em;
+      padding: 0em;
+      box-sizing: border-box;
+
+      background:
+        linear-gradient(var(--c1),var(--c1)) content-box,
+        linear-gradient(var(--c1),var(--c1)) content-box,
+        var(--c2);
+      background-position:center;
+      background-size: 100% var(--t),var(--t) 100%;
+      background-repeat: no-repeat;
+
+      transform: translateY(-3.3em) translateX(0.5em);
+      z-index: 11;
+    }
+    atom-pane-axis.cr-vertical-strip {
+      box-sizing: border-box;
+      border: 10px solid transparent;
+      // padding: 5px;
+      box-shadow: 0px 0px 0px 10px inset rgba(55,55,55,0.7);
+    }
+    atom-pane-axis.cr-vertical-strip::before {
+      content: ':::';
+      font-size: xx-large;
+      font-weight: 900;
+      text-align: center;
+      position: absolute;
+      bottom: calc(100% - 0px);
+      display: block;
+      width: 10%;
+      color: white;
+      // transform: translateX(40px);
+      left: 10%;
+      transform-origin: bottom;
+      box-sizing: border-box;
+      background-color: rgba(55,55,55,0.7);
+      border-radius: 15px 15px 0px 0px;
+    }
+    atom-pane-axis.cr-vertical-strip::after {
+      content: 'X';
+      font-size: xx-large;
+      text-align: center;
+      position: absolute;
+      width: 10%;
+      bottom: calc(100% - 0px);
+      // right: 0px;
+      left: 80%;
+      // top: 10%;
+      display: block;
+      color: red;
+      // transform: translateX(40px);
+      transform-origin: right;
+      // box-shadow: 0px 0px 0px 5px white;
+      box-sizing: border-box;
+      background-color: rgba(55,55,55,0.7);
+      border-radius: 15px 15px 0px 0px;
+    }
   }
 }
