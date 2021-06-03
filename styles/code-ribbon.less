@@ -155,11 +155,6 @@ atom-pane-container.cr-primary-container {
 
     // highlight active tabs to indicate active patch
     .tab-bar {
-      // background: radial-gradient(
-      //   12em 100% at right,
-      //   @active-highlight-color 0%,
-      //   rgba(0,0,0,0) 100%
-      // );
       background-color: lighten(@tab-background-color-active, 10%) !important;
     }
     .tab.active {
@@ -185,6 +180,10 @@ atom-pane-container.cr-primary-container {
     font-style: italic;
     font-weight: bold;
     align-self: center;
+  }
+  .cr-patch .tab-bar .tab .title {
+    font-size: 1.4em;
+    text-align: center;
   }
 }
 
