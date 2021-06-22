@@ -1,7 +1,7 @@
 {
   "name": "code-ribbon",
   "main": "./lib/code-ribbon",
-  "version": "0.2.12",
+  "version": "0.3.0",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
   "repository": {
