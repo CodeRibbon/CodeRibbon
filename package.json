@@ -65,6 +65,7 @@
     },
     "pane_count_calc": {
       "type": "object",
+      "title": "Patch count calculation",
       "order": 30,
       "properties": {
         "pane_count_horizontal_mode": {
@@ -134,6 +135,27 @@
           "description": "Add a patch to the current column"
         }
       ]
+    },
+    "snap_alignment": {
+      "type": "object",
+      "title": "Horizontal Scroll Snap",
+      "properties": {
+        "autoscroll_timeout": {
+          "title": "Delay until columns are auto-aligned to screen",
+          "description": "Wait this number of seconds after scrolling to automatically align the viewport to the nearest patch column. Set to zero to disable the auto-snapping to columns. Values between 0 and 0.5 are not recommended for physical scrollwheel users.",
+          "default": 1.0,
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "distance_cutoff": {
+          "title": "Max distance to align",
+          "description": "How close do you have to be to a column for the auto-snap to align? You can express this either as a percentage (of the current column width) or as a number of pixels.",
+          "default": "20%",
+          "type": "string",
+          "pattern": "^[0-9]+%?$"
+        }
+      }
     }
   },
   "devDependencies": {
