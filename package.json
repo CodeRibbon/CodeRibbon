@@ -1,7 +1,7 @@
 {
   "name": "code-ribbon",
   "main": "./lib/code-ribbon",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "An Atom implementation of PatchWorks",
   "keywords": [],
   "repository": {
@@ -143,7 +143,7 @@
         "autoscroll_timeout": {
           "title": "Delay until columns are auto-aligned to screen",
           "description": "Wait this number of seconds after scrolling to automatically align the viewport to the nearest patch column. Set to zero to disable the auto-snapping to columns. Values between 0 and 0.5 are not recommended for physical scrollwheel users.",
-          "default": 1.0,
+          "default": 1,
           "type": "number",
           "minimum": 0,
           "maximum": 30
