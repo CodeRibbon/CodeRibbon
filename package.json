@@ -6,7 +6,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/utk-se/CodeRibbon.git"
+    "url": "ssh://git@github.com/CodeRibbon/CodeRibbon.git"
   },
   "license": "MIT",
   "engines": {
